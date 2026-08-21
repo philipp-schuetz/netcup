@@ -1,0 +1,32 @@
+{
+  "name": "netcup-voucher-cli",
+  "version": "0.1.0",
+  "description": "Query currently available netcup voucher codes from the terminal.",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "bun@1.4.0",
+  "bin": {
+    "netcup": "./src/bin.ts"
+  },
+  "scripts": {
+    "netcup": "bun src/bin.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "check": "bun run test && bun run typecheck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philipp-schuetz/netcup.git"
+  },
+  "homepage": "https://github.com/philipp-schuetz/netcup#readme",
+  "bugs": {
+    "url": "https://github.com/philipp-schuetz/netcup/issues"
+  },
+  "engines": {
+    "bun": ">=1.2.0"
+  },
+  "devDependencies": {
+    "bun-types": "1.3.3",
+    "typescript": "5.9.3"
+  }
+}
