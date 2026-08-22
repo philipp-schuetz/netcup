@@ -80,12 +80,17 @@ also requires `main`, an exact version confirmation, and environment approval.
 ## Later releases
 
 1. Run `bun pm version patch --no-git-tag-version` (or choose `minor`/`major`),
-   run `bun run check`, and merge the version commit into `main`.
-2. Open **Actions → Publish to npm with Bun → Run workflow** on `main`.
-3. Enter the exact version from `package.json` and approve the GitHub `npm`
-   environment deployment.
-4. Confirm the package contents on npm before announcing the release.
-5. Rotate the granular token before it expires and revoke it when automated
+   update `src/cli.ts` to the same version, run `bun run check`, and merge the
+   version commit into `main`.
+2. Tag that commit as `v<version>` and push the tag. For example, version
+   `0.1.1` uses `git tag v0.1.1` followed by `git push origin v0.1.1`.
+3. The **Publish to npm with Bun** workflow starts automatically, verifies that
+   the tag is on `main`, and checks the tag against `package.json`.
+4. Approve the GitHub `npm` environment deployment when protection rules
+   require it. Manual `workflow_dispatch` from `main` remains available as a
+   fallback.
+5. Confirm the package contents on npm before announcing the release.
+6. Rotate the granular token before it expires and revoke it when automated
    publishing is no longer needed.
 
 Keep npm package publishing access on **Require two-factor authentication or a

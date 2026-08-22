@@ -1,6 +1,6 @@
 {
   "name": "netcup",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Query currently available netcup voucher codes from the terminal.",
   "license": "MIT",
   "type": "module",

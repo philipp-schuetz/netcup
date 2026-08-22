@@ -1,7 +1,12 @@
 import { describe, expect, test } from "bun:test";
-import { parseArguments } from "../src/cli";
+import { parseArguments, version } from "../src/cli";
 
 describe("argument parser", () => {
+  test("keeps the CLI and package versions in sync", async () => {
+    const manifest = await Bun.file("package.json").json();
+    expect(version).toBe(manifest.version);
+  });
+
   test("accepts one product query and JSON output", () => {
     expect(parseArguments(["RS", "1000", "G12", "--json"])).toEqual({
       productQuery: "RS 1000 G12",

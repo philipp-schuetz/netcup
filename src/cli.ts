@@ -8,7 +8,7 @@ import {
   type VoucherInventory,
 } from "./inventory";
 
-export const version = "0.1.0";
+export const version = "0.1.1";
 
 type Flags = {
   all: boolean;
