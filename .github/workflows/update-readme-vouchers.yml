@@ -1,0 +1,48 @@
+name: Refresh voucher codes
+
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/update-readme-vouchers.yml"
+      - "scripts/update-readme-vouchers.ts"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-voucher-refresh
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.0
+      - run: bun install --frozen-lockfile
+      - name: Test updater and CLI
+        run: bun run check
+      - name: Refresh generated README section
+        run: bun scripts/update-readme-vouchers.ts
+      - name: Commit changed voucher snapshot
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README voucher snapshot is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: refresh voucher codes"
+          git push origin HEAD:main

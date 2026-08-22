@@ -1,5 +1,7 @@
 # netcup voucher CLI
 
+[![Refresh voucher codes](https://github.com/philipp-schuetz/netcup/actions/workflows/update-readme-vouchers.yml/badge.svg)](https://github.com/philipp-schuetz/netcup/actions/workflows/update-readme-vouchers.yml)
+
 A small, read-only command-line program for querying available netcup product
 voucher codes.
 
@@ -14,6 +16,31 @@ tooling.
 
 > This is an independent community project and is not affiliated with netcup.
 > Voucher codes are one-time use and can become unavailable at any moment.
+
+## Current voucher codes
+
+This table is refreshed automatically every six hours from the same one-hour
+cached data source used by the CLI. Codes are one-time use and may become
+unavailable between refreshes. The timestamp changes only when the code list
+changes, so routine checks do not create no-op commits.
+
+<!-- voucher-codes:start -->
+_Last code update: **2026-08-22 06:32 UTC**_
+
+| Product | Available voucher codes |
+| :-- | :-- |
+| **RS 1000 G12**<br><sub>root-1000-g12</sub> | <code>5997nc17871254360</code><br><code>5997nc17871257290</code><br><code>5997nc17871391830</code><br><code>5997nc17871950320</code><br><code>5997nc17872353250</code><br><code>5997nc17873007070</code> |
+| **RS 2000 G12**<br><sub>root-2000-g12</sub> | <code>5998nc17867212600</code><br><code>5998nc17867222310</code><br><code>5998nc17867616780</code><br><code>5998nc17868709620</code><br><code>5998nc17872171470</code><br><code>5998nc17872174560</code> |
+| **RS 4000 G12**<br><sub>root-4000-g12</sub> | <code>5999nc17867071820</code><br><code>5999nc17868636240</code><br><code>5999nc17869120150</code><br><code>5999nc17869612810</code><br><code>5999nc17873059050</code><br><code>5999nc17873059051</code> |
+| **RS 8000 G12**<br><sub>root-8000-g12</sub> | <code>6000nc17850803380</code><br><code>6000nc17856674370</code><br><code>6000nc17860573670</code><br><code>6000nc17872034050</code><br><code>6000nc17872282770</code><br><code>6000nc17873031300</code> |
+| **VPS 1000 G12**<br><sub>vps-1000-g12</sub> | <code>5799nc17867757510</code><br><code>5799nc17869897160</code><br><code>5799nc17871516130</code><br><code>5799nc17871953330</code><br><code>5799nc17872021630</code><br><code>5799nc17872721320</code> |
+| **VPS 2000 G12**<br><sub>vps-2000-g12</sub> | <code>5800nc17849110850</code><br><code>5800nc17850818930</code><br><code>5800nc17854582770</code><br><code>5800nc17855797990</code><br><code>5800nc17864759200</code><br><code>5800nc17872021630</code> |
+| **VPS 4000 G12**<br><sub>vps-4000-g12</sub> | <code>5801nc17823158290</code><br><code>5801nc17823158291</code><br><code>5801nc17823158292</code><br><code>5801nc17823158293</code><br><code>5801nc17824893650</code><br><code>5801nc17863796540</code> |
+| **VPS 8000 G12**<br><sub>vps-8000-g12</sub> | <code>5802nc17823158290</code><br><code>5802nc17823161240</code><br><code>5802nc17823161241</code><br><code>5802nc17823161242</code><br><code>5802nc17823161243</code><br><code>5802nc17871547160</code> |
+| **Webhosting 2000**<br><sub>webhosting-2000</sub> | <code>1927nc17309775710</code><br><code>1927nc17309775711</code><br><code>1927nc17309775712</code><br><code>1927nc17309775714</code><br><code>4602nc17855640460</code><br><code>4602nc17855643400</code> |
+| **Webhosting 4000**<br><sub>webhosting-4000</sub> | <code>1928nc17309776320</code><br><code>1928nc17309776321</code><br><code>1928nc17309776325</code><br><code>1928nc17309776326</code><br><code>4603nc17823164450</code><br><code>4603nc17823164451</code> |
+| **Webhosting 8000**<br><sub>webhosting-8000</sub> | <code>1929nc17309777820</code><br><code>1929nc17309777821</code><br><code>1929nc17309777822</code><br><code>4604nc17823164460</code><br><code>4604nc17823167320</code><br><code>4604nc17823167321</code> |
+<!-- voucher-codes:end -->
 
 ## Requirements
 
