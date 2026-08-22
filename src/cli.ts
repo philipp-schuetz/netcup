@@ -11,6 +11,7 @@ import {
 export const version = "0.1.0";
 
 type Flags = {
+  all: boolean;
   help: boolean;
   json: boolean;
   version: boolean;
@@ -22,15 +23,16 @@ export type ParsedArguments = {
   flags: Flags;
 };
 
-const booleanFlags = new Set(["help", "json", "version"]);
-const shortFlags: Record<string, "help" | "json" | "version"> = {
+const booleanFlags = new Set(["all", "help", "json", "version"]);
+const shortFlags: Record<string, "all" | "help" | "json" | "version"> = {
+  a: "all",
   h: "help",
   j: "json",
   v: "version",
 };
 
 export function parseArguments(argv: string[]): ParsedArguments {
-  const flags: Flags = { help: false, json: false, version: false };
+  const flags: Flags = { all: false, help: false, json: false, version: false };
   const positionals: string[] = [];
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -75,10 +77,12 @@ export function printHelp() {
     "netcup " + version + " — query available product voucher codes",
     "",
     "Usage:",
-    "  netcup                            List products and voucher codes",
+    "  netcup                            Show help",
+    "  netcup --all                      List products and voucher codes",
     "  netcup <product>                  Filter to one product",
     "",
     "Options:",
+    "  --all, -a                         Query every supported product",
     "  --source <https-url>              Override the voucher API endpoint",
     "  --json, -j                        Print JSON",
     "  --help, -h                        Show help",
@@ -86,6 +90,7 @@ export function printHelp() {
     "",
     "Examples:",
     "  netcup",
+    "  netcup --all",
     "  netcup vps-1000-g12",
     "  netcup \"RS 1000 G12\" --json",
   ].join("\n"));
@@ -129,8 +134,14 @@ function renderTable(headers: string[], rows: string[][]) {
 
 export async function main(argv = process.argv.slice(2)) {
   const parsed = parseArguments(argv);
-  if (parsed.flags.help) return printHelp();
+  if (argv.length === 0 || parsed.flags.help) return printHelp();
   if (parsed.flags.version) return console.log(version);
+  if (parsed.flags.all && parsed.productQuery) {
+    throw new Error("Option --all cannot be combined with a product");
+  }
+  if (!parsed.flags.all && !parsed.productQuery) {
+    throw new Error("Specify a product or use --all");
+  }
 
   const inventory = await fetchVoucherInventory({ sourceUrl: sourceUrl(parsed.flags.source) });
   const selected: readonly Product[] = parsed.productQuery

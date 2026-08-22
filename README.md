@@ -31,26 +31,32 @@ npm install --global netcup
 
 ## Usage
 
+Show help without installing the package globally:
+
+~~~bash
+bunx netcup
+~~~
+
 List every supported product and its currently available codes:
 
 ~~~bash
-netcup
+bunx netcup --all
 ~~~
 
 Filter the response to one product:
 
 ~~~bash
-netcup vps-1000-g12
-netcup "RS 1000 G12"
+bunx netcup vps-1000-g12
+bunx netcup "RS 1000 G12"
 ~~~
 
 Use JSON output:
 
 ~~~bash
-netcup vps-1000-g12 --json
+bunx netcup vps-1000-g12 --json
 ~~~
 
-Run "netcup --help" for all options.
+Run `bunx netcup --help` for all options. If installed globally, omit `bunx`.
 
 The default source is https://netcupgutschein.com/api/vouchers. A different
 HTTPS endpoint with the same public JSON shape can be supplied using
