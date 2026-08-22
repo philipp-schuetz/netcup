@@ -1,6 +1,6 @@
 import { productSlugs, type ProductSlug } from "./catalog";
 
-export const defaultSourceUrl = "https://netcupgutschein.com/api/vouchers";
+export const defaultSourceUrl = "https://netcupgutschein.com/api/cli/vouchers";
 
 export type VoucherCodeMap = Record<ProductSlug, string[]>;
 
@@ -27,11 +27,9 @@ export function normalizeVoucherCodeMap(value: unknown): VoucherCodeMap | null {
   for (const slug of productSlugs) {
     const codes = (value as Record<string, unknown>)[slug];
     if (!Array.isArray(codes)) return null;
-    const validCodes = [...new Set(codes.filter((code): code is string => (
+    result[slug] = [...new Set(codes.filter((code): code is string => (
       typeof code === "string" && voucherCodePattern.test(code)
     )))];
-    if (validCodes.length > 1) return null;
-    result[slug] = validCodes;
   }
   return result;
 }
