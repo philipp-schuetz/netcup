@@ -15,13 +15,18 @@ tooling.
 
 - [Bun](https://bun.sh/) 1.2 or newer
 
+The npm package still uses Bun as its runtime.
+
 ## Install
 
 ~~~bash
-git clone https://github.com/philipp-schuetz/netcup.git
-cd netcup
-bun install --frozen-lockfile
-bun link
+bun add --global netcup
+~~~
+
+Installing through npm also works when Bun is already installed:
+
+~~~bash
+npm install --global netcup
 ~~~
 
 ## Usage
@@ -54,8 +59,11 @@ HTTPS endpoint with the same public JSON shape can be supplied using
 ## Development
 
 ~~~bash
+git clone https://github.com/philipp-schuetz/netcup.git
+cd netcup
 bun install
 bun run check
+bun publish --dry-run
 ~~~
 
 ## License
