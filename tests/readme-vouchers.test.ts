@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { createEmptyVoucherCodeMap } from "../src/inventory";
 import {
   renderVoucherBlock,
+  productUrls,
   updateReadmeVoucherBlock,
   voucherBlockEnd,
   voucherBlockStart,
@@ -20,11 +21,22 @@ describe("README voucher snapshot", () => {
 
     const block = renderVoucherBlock(inventory, "2026-08-22 06:30 UTC");
     expect(block).toContain("_Last code update: **2026-08-22 06:30 UTC**_");
-    expect(block).toContain("| **RS 1000 G12**<br><sub>root-1000-g12</sub>");
+    expect(block).toContain(
+      "| [**RS 1000 G12**](https://www.netcup.com/en/server/root-server/rs-1000-g12-ip-iv-12m)<br><sub>root-1000-g12</sub>",
+    );
     expect(block.indexOf("0000nc1111111111")).toBeLessThan(
       block.indexOf("0000nc2222222222"),
     );
     expect(block).toContain("_None currently available_");
+  });
+
+  test("links every product to an official netcup comparison page", () => {
+    expect(Object.keys(productUrls)).toHaveLength(11);
+    for (const value of Object.values(productUrls)) {
+      const url = new URL(value);
+      expect(url.protocol).toBe("https:");
+      expect(url.hostname).toBe("www.netcup.com");
+    }
   });
 
   test("preserves the timestamp and file when the code set is unchanged", () => {

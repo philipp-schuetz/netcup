@@ -1,5 +1,5 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { products } from "../src/catalog";
+import { products, type ProductSlug } from "../src/catalog";
 import {
   fetchVoucherInventory,
   type VoucherCodeMap,
@@ -7,6 +7,20 @@ import {
 
 export const voucherBlockStart = "<!-- voucher-codes:start -->";
 export const voucherBlockEnd = "<!-- voucher-codes:end -->";
+
+export const productUrls = {
+  "root-1000-g12": "https://www.netcup.com/en/server/root-server/rs-1000-g12-ip-iv-12m",
+  "root-2000-g12": "https://www.netcup.com/en/server/root-server/rs-2000-g12-ip-iv-12m",
+  "root-4000-g12": "https://www.netcup.com/en/server/root-server/rs-4000-g12-ip-iv-12m",
+  "root-8000-g12": "https://www.netcup.com/en/server/root-server/rs-8000-g12-ip-iv-12m",
+  "vps-1000-g12": "https://www.netcup.com/en/server/vps/vps-1000-g12-iv-12m",
+  "vps-2000-g12": "https://www.netcup.com/en/server/vps/vps-2000-g12-iv-12m",
+  "vps-4000-g12": "https://www.netcup.com/en/server/vps/vps-4000-g12-iv-12m",
+  "vps-8000-g12": "https://www.netcup.com/en/server/vps/vps-8000-g12-iv-12m",
+  "webhosting-2000": "https://www.netcup.com/en/hosting/web-hosting/webhosting-2000-vie-iv",
+  "webhosting-4000": "https://www.netcup.com/en/hosting/web-hosting/webhosting-4000-vie-iv",
+  "webhosting-8000": "https://www.netcup.com/en/hosting/web-hosting/webhosting-8000-vie-iv",
+} as const satisfies Record<ProductSlug, string>;
 
 function formatTimestamp(value: Date) {
   if (Number.isNaN(value.getTime())) throw new Error("Invalid README update timestamp");
@@ -34,7 +48,7 @@ export function renderVoucherBlock(
   timestamp: string,
 ) {
   const rows = products.map((product) => (
-    `| **${escapeHtml(product.name)}**<br><sub>${escapeHtml(product.slug)}</sub> | ${renderCodes(inventory[product.slug])} |`
+    `| [**${escapeHtml(product.name)}**](${productUrls[product.slug]})<br><sub>${escapeHtml(product.slug)}</sub> | ${renderCodes(inventory[product.slug])} |`
   ));
 
   return [
