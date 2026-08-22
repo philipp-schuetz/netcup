@@ -8,7 +8,7 @@ import {
   type VoucherInventory,
 } from "./inventory";
 
-export const version = "0.1.1";
+export const version = "0.2.0";
 
 type Flags = {
   all: boolean;
@@ -19,6 +19,7 @@ type Flags = {
 };
 
 export type ParsedArguments = {
+  command: "list" | "query";
   productQuery?: string;
   flags: Flags;
 };
@@ -66,10 +67,12 @@ export function parseArguments(argv: string[]): ParsedArguments {
     positionals.push(argument);
   }
 
-  return {
-    productQuery: positionals.join(" ") || undefined,
-    flags,
-  };
+  if (positionals[0] === "list") {
+    if (positionals.length > 1) throw new Error("Command list does not accept arguments");
+    return { command: "list", flags };
+  }
+
+  return { command: "query", productQuery: positionals.join(" ") || undefined, flags };
 }
 
 export function printHelp() {
@@ -78,6 +81,7 @@ export function printHelp() {
     "",
     "Usage:",
     "  netcup                            Show help",
+    "  netcup list                       List supported products",
     "  netcup --all                      List products and voucher codes",
     "  netcup <product>                  Filter to one product",
     "",
@@ -90,6 +94,7 @@ export function printHelp() {
     "",
     "Examples:",
     "  netcup",
+    "  netcup list",
     "  netcup --all",
     "  netcup vps-1000-g12",
     "  netcup \"RS 1000 G12\" --json",
@@ -132,10 +137,24 @@ function renderTable(headers: string[], rows: string[][]) {
   for (const row of rows) console.log(line(row));
 }
 
+function printProductList(json: boolean) {
+  const result = products.map(({ slug, name }) => ({ slug, name }));
+  if (json) {
+    console.log(JSON.stringify({ products: result }, null, 2));
+    return;
+  }
+  renderTable(["PRODUCT", "SLUG"], result.map((product) => [product.name, product.slug]));
+}
+
 export async function main(argv = process.argv.slice(2)) {
   const parsed = parseArguments(argv);
   if (argv.length === 0 || parsed.flags.help) return printHelp();
   if (parsed.flags.version) return console.log(version);
+  if (parsed.command === "list") {
+    if (parsed.flags.all) throw new Error("Option --all cannot be used with list");
+    if (parsed.flags.source) throw new Error("Option --source cannot be used with list");
+    return printProductList(parsed.flags.json);
+  }
   if (parsed.flags.all && parsed.productQuery) {
     throw new Error("Option --all cannot be combined with a product");
   }

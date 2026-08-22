@@ -37,6 +37,13 @@ Show help without installing the package globally:
 bunx netcup
 ~~~
 
+List the supported product catalog without querying the voucher API:
+
+~~~bash
+bunx netcup list
+bunx netcup list --json
+~~~
+
 List every supported product and its currently available codes:
 
 ~~~bash
