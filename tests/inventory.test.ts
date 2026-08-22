@@ -41,4 +41,13 @@ describe("voucher API", () => {
   test("rejects incomplete product maps", () => {
     expect(normalizeVoucherCodeMap({ "root-1000-g12": [] })).toBeNull();
   });
+
+  test("rejects bulk code lists from a misconfigured source", () => {
+    const products = createEmptyVoucherCodeMap();
+    products["root-1000-g12"] = [
+      "0000nc0000000000",
+      "0000nc1111111111",
+    ];
+    expect(normalizeVoucherCodeMap(products)).toBeNull();
+  });
 });

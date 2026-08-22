@@ -27,9 +27,11 @@ export function normalizeVoucherCodeMap(value: unknown): VoucherCodeMap | null {
   for (const slug of productSlugs) {
     const codes = (value as Record<string, unknown>)[slug];
     if (!Array.isArray(codes)) return null;
-    result[slug] = [...new Set(codes.filter((code): code is string => (
+    const validCodes = [...new Set(codes.filter((code): code is string => (
       typeof code === "string" && voucherCodePattern.test(code)
     )))];
+    if (validCodes.length > 1) return null;
+    result[slug] = validCodes;
   }
   return result;
 }

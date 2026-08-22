@@ -7,7 +7,8 @@ Prefer a browser? Browse the current [netcup voucher catalog and live code
 finder](https://netcupgutschein.com/).
 
 The program sends one HTTPS GET request to the configured voucher API,
-validates the response, and prints product-to-code pairs. It contains no web
+validates the response, and prints at most one code per matching product. The
+public selection is cached server-side and changes at most once per hour. It contains no web
 crawler, scraper, account login, data writer, database client, or deployment
 tooling.
 
@@ -47,7 +48,7 @@ bunx netcup list
 bunx netcup list --json
 ~~~
 
-List every supported product and its currently available codes:
+List every supported product and its current hourly code:
 
 ~~~bash
 bunx netcup --all
@@ -70,7 +71,8 @@ bunx netcup vps-1000-g12 --json
 
 Run `bunx netcup --help` for all options. If installed globally, omit `bunx`.
 
-The default source is https://netcupgutschein.com/api/vouchers. A different
+The default source is https://netcupgutschein.com/api/vouchers. Its response is
+an intentionally reduced hourly snapshot, not the complete voucher inventory. A different
 HTTPS endpoint with the same public JSON shape can be supplied using
 "--source <https-url>" or "NETCUP_VOUCHER_SOURCE".
 

@@ -1,9 +1,11 @@
 import { describe, expect, test } from "bun:test";
 import { parseArguments, version } from "../src/cli";
 
+const packageRoot = new URL("../", import.meta.url);
+
 describe("argument parser", () => {
   test("keeps the CLI and package versions in sync", async () => {
-    const manifest = await Bun.file("package.json").json();
+    const manifest = await Bun.file(new URL("package.json", packageRoot)).json();
     expect(version).toBe(manifest.version);
   });
 
@@ -56,6 +58,7 @@ describe("argument parser", () => {
 
   test("shows help without querying the API when called without arguments", async () => {
     const child = Bun.spawn([process.execPath, "src/bin.ts"], {
+      cwd: packageRoot.pathname,
       stdout: "pipe",
       stderr: "pipe",
     });
@@ -73,6 +76,7 @@ describe("argument parser", () => {
 
   test("lists the product catalog without voucher codes", async () => {
     const child = Bun.spawn([process.execPath, "src/bin.ts", "list"], {
+      cwd: packageRoot.pathname,
       stdout: "pipe",
       stderr: "pipe",
     });
@@ -92,6 +96,7 @@ describe("argument parser", () => {
 
   test("lists the product catalog as JSON", async () => {
     const child = Bun.spawn([process.execPath, "src/bin.ts", "list", "--json"], {
+      cwd: packageRoot.pathname,
       stdout: "pipe",
       stderr: "pipe",
     });
