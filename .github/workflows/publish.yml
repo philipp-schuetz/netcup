@@ -1,11 +1,15 @@
-name: Publish to npm
+name: Publish to npm with Bun
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: Version from package.json to publish
+        required: true
+        type: string
 
 permissions:
   contents: read
-  id-token: write
 
 concurrency:
   group: npm-publish
@@ -17,15 +21,31 @@ jobs:
     environment: npm
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
-        with:
-          node-version: "24"
-          registry-url: https://registry.npmjs.org
-          package-manager-cache: false
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.4.0
-      - run: bun install --frozen-lockfile
-      - run: bun run check
-      - run: npm pack --dry-run
-      - run: npm stage publish
+      - name: Require the main branch
+        if: github.ref != 'refs/heads/main'
+        run: |
+          echo "Releases must run from main."
+          exit 1
+      - name: Verify requested version
+        env:
+          EXPECTED_VERSION: ${{ inputs.version }}
+        run: >-
+          bun -e 'const actual = (await Bun.file("package.json").json()).version;
+          const expected = process.env.EXPECTED_VERSION;
+          if (actual !== expected) {
+            console.error(`Requested ${expected}, package.json contains ${actual}`);
+            process.exit(1);
+          }'
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+      - name: Test and typecheck
+        run: bun run check
+      - name: Verify package contents
+        run: bun pm pack --dry-run
+      - name: Publish package
+        run: bun publish --access public --ignore-scripts
+        env:
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}

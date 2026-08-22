@@ -16,6 +16,8 @@
     "test": "bun test",
     "typecheck": "tsc --noEmit",
     "check": "bun run test && bun run typecheck",
+    "release:check": "bun pm pack --dry-run",
+    "release": "bun publish --access public",
     "prepublishOnly": "bun run check"
   },
   "repository": {

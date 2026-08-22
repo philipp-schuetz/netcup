@@ -63,11 +63,11 @@ git clone https://github.com/philipp-schuetz/netcup.git
 cd netcup
 bun install
 bun run check
-bun publish --dry-run
+bun run release:check
 ~~~
 
 Maintainers should follow [PUBLISHING.md](PUBLISHING.md) for the initial npm
-release and token-free GitHub trusted publishing setup.
+release and the Bun-based GitHub publishing setup.
 
 ## License
 
