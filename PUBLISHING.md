@@ -7,7 +7,7 @@ This repository publishes only the read-only voucher CLI. The package uses the
 Never add an npm token, OTP, SSH key, API credential, `.env` file, crawler, or
 private data-source implementation to this repository. In particular, do not
 put `_authToken` in the tracked `.npmrc` file. The GitHub workflow contains
-only a reference to an encrypted environment secret, never the secret value.
+no npm token or other publishing secret.
 
 ## First release
 
@@ -42,24 +42,6 @@ Do not pass an npm token on the command line. Complete the browser login and
 2FA challenge interactively, then log out immediately so the bootstrap CLI
 credential is revoked. Log out even if publishing fails.
 
-## Create the automation token
-
-`bun publish` accepts `NPM_CONFIG_TOKEN` for non-interactive publishing. After
-the first release exists, open npm **Account → Access Tokens → Generate New
-Token** and use:
-
-| Field | Value |
-| --- | --- |
-| Token name | `github-netcup-bun-publish` |
-| Bypass two-factor authentication | Enabled |
-| Packages and scopes permission | Read and write |
-| Package selection | Only `netcup` |
-| Organizations permission | No access |
-| Expiration | The shortest practical period |
-
-Copy the token once, add it to GitHub immediately, then clear it from the
-clipboard. Never paste it into a repository file, issue, command line, or chat.
-
 ## Configure GitHub
 
 Create a protected GitHub environment for the public repository:
@@ -68,14 +50,28 @@ Create a protected GitHub environment for the public repository:
 2. Name it exactly `npm`.
 3. Add a required reviewer and keep self-review disabled when your repository
    plan and team setup allow it.
-4. Under **Environment secrets**, create `NPM_TOKEN` and paste the granular npm
-   token as its value.
+4. Do not add an `NPM_TOKEN` secret.
 
-Do not create a repository variable or commit a token-bearing `.npmrc`. The
-workflow exposes the secret only to the final `bun publish` step. Tests and the
-package dry run happen first without the token; lifecycle scripts are disabled
-only in that final CI step because the checks have already passed. The workflow
-also requires `main`, an exact version confirmation, and environment approval.
+Do not create a repository variable or commit a token-bearing `.npmrc`.
+
+## Configure npm trusted publishing
+
+Open the `netcup` package on npm, then **Settings → Trusted Publisher** and use:
+
+| Field | Value |
+| --- | --- |
+| Provider | GitHub Actions |
+| Organization or user | `philipp-schuetz` |
+| Repository | `netcup` |
+| Workflow filename | `publish.yml` |
+| Environment name | `npm` |
+| Allowed actions | `npm publish` |
+
+The workflow uses Bun for installing, testing, typechecking, and inspecting the
+package. Its final registry operation uses npm CLI only because npm trusted
+publishing performs its OIDC credential exchange there. No long-lived token is
+stored. The workflow also requires an exact version and a tagged commit on
+`main`.
 
 ## Later releases
 
@@ -84,15 +80,12 @@ also requires `main`, an exact version confirmation, and environment approval.
    version commit into `main`.
 2. Tag that commit as `v<version>` and push the tag. For example, version
    `0.1.1` uses `git tag v0.1.1` followed by `git push origin v0.1.1`.
-3. The **Publish to npm with Bun** workflow starts automatically, verifies that
+3. The **Publish to npm** workflow starts automatically, verifies that
    the tag is on `main`, and checks the tag against `package.json`.
 4. Approve the GitHub `npm` environment deployment when protection rules
    require it. Manual `workflow_dispatch` from `main` remains available as a
    fallback.
 5. Confirm the package contents on npm before announcing the release.
-6. Rotate the granular token before it expires and revoke it when automated
-   publishing is no longer needed.
-
-Keep npm package publishing access on **Require two-factor authentication or a
-granular access token with bypass 2FA enabled**. Selecting **disallow tokens**
-will intentionally prevent this Bun workflow from publishing.
+6. After the first trusted release succeeds, set package publishing access to
+   **Require two-factor authentication and disallow tokens** and revoke any old
+   automation tokens.

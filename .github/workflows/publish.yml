@@ -1,4 +1,4 @@
-name: Publish to npm with Bun
+name: Publish to npm
 
 on:
   push:
@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write
 
 concurrency:
   group: npm-publish
@@ -26,6 +27,11 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.4.0
@@ -58,7 +64,5 @@ jobs:
         run: bun run check
       - name: Verify package contents
         run: bun pm pack --dry-run
-      - name: Publish package
-        run: bun publish --access public --ignore-scripts
-        env:
-          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish package with npm trusted publishing
+        run: npm publish --access public --ignore-scripts

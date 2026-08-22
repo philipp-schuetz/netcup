@@ -73,7 +73,7 @@ bun run release:check
 ~~~
 
 Maintainers should follow [PUBLISHING.md](PUBLISHING.md) for the initial npm
-release and the Bun-based GitHub publishing setup.
+release and token-free GitHub trusted publishing setup.
 
 ## License
 
