@@ -22,6 +22,7 @@ npm login --auth-type=web
 npm whoami
 npm pack --dry-run
 npm publish --access public
+npm logout --registry=https://registry.npmjs.org/
 ```
 
 Read the dry-run file list before publishing. It must contain only:
@@ -37,8 +38,9 @@ src/inventory.ts
 ```
 
 Do not pass an npm token on the command line. Complete the browser login and
-2FA challenge interactively. Delete any generated `netcup-*.tgz` archive after
-inspection; archives are ignored by Git.
+2FA challenge interactively, then log out immediately so the bootstrap CLI
+credential is revoked. Log out even if publishing fails. Delete any generated
+`netcup-*.tgz` archive after inspection; archives are ignored by Git.
 
 ## Configure GitHub
 
