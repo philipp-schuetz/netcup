@@ -26,16 +26,21 @@ function normalizeLookup(value: string) {
   return value.toLowerCase().replaceAll(/[^a-z0-9]/g, "");
 }
 
-export function resolveProduct(value: string | undefined): Product | null {
-  if (!value) return null;
+export function findProducts(value: string | undefined): readonly Product[] {
+  if (!value) return [];
   const normalized = normalizeLookup(value);
+  if (!normalized) return [];
   const exact = products.find((product) => (
     normalizeLookup(product.slug) === normalized || normalizeLookup(product.name) === normalized
   ));
-  if (exact) return exact;
+  if (exact) return [exact];
 
-  const matches = products.filter((product) => (
+  return products.filter((product) => (
     normalizeLookup(product.slug).includes(normalized) || normalizeLookup(product.name).includes(normalized)
   ));
+}
+
+export function resolveProduct(value: string | undefined): Product | null {
+  const matches = findProducts(value);
   return matches.length === 1 ? matches[0] : null;
 }

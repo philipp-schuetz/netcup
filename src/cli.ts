@@ -1,6 +1,6 @@
 import {
+  findProducts,
   products,
-  resolveProduct,
   type Product,
 } from "./catalog";
 import {
@@ -8,7 +8,7 @@ import {
   type VoucherInventory,
 } from "./inventory";
 
-export const version = "0.2.0";
+export const version = "0.3.0";
 
 type Flags = {
   all: boolean;
@@ -83,7 +83,7 @@ export function printHelp() {
     "  netcup                            Show help",
     "  netcup list                       List supported products",
     "  netcup --all                      List products and voucher codes",
-    "  netcup <product>                  Filter to one product",
+    "  netcup <query>                    Filter products by name or slug",
     "",
     "Options:",
     "  --all, -a                         Query every supported product",
@@ -96,6 +96,7 @@ export function printHelp() {
     "  netcup",
     "  netcup list",
     "  netcup --all",
+    "  netcup root",
     "  netcup vps-1000-g12",
     "  netcup \"RS 1000 G12\" --json",
   ].join("\n"));
@@ -108,10 +109,10 @@ function sourceUrl(value: string | undefined) {
   return url.toString();
 }
 
-function requireProduct(query: string) {
-  const product = resolveProduct(query);
-  if (product) return product;
-  throw new Error("Unknown or ambiguous product: " + query);
+function requireProducts(query: string) {
+  const matches = findProducts(query);
+  if (matches.length > 0) return matches;
+  throw new Error("No products match: " + query);
 }
 
 function productResult(product: Product, inventory: VoucherInventory) {
@@ -164,7 +165,7 @@ export async function main(argv = process.argv.slice(2)) {
 
   const inventory = await fetchVoucherInventory({ sourceUrl: sourceUrl(parsed.flags.source) });
   const selected: readonly Product[] = parsed.productQuery
-    ? [requireProduct(parsed.productQuery)]
+    ? requireProducts(parsed.productQuery)
     : products;
   const result = selected.map((product) => productResult(product, inventory));
 

@@ -3,6 +3,9 @@
 A small, read-only command-line program for querying available netcup product
 voucher codes.
 
+Prefer a browser? Browse the current [netcup voucher catalog and live code
+finder](https://netcupgutschein.com/).
+
 The program sends one HTTPS GET request to the configured voucher API,
 validates the response, and prints product-to-code pairs. It contains no web
 crawler, scraper, account login, data writer, database client, or deployment
@@ -50,9 +53,11 @@ List every supported product and its currently available codes:
 bunx netcup --all
 ~~~
 
-Filter the response to one product:
+Filter by a full or partial product name. Broad queries return every matching
+product, so `root` returns all supported Root Servers:
 
 ~~~bash
+bunx netcup root
 bunx netcup vps-1000-g12
 bunx netcup "RS 1000 G12"
 ~~~
