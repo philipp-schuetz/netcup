@@ -66,6 +66,9 @@ bun run check
 bun publish --dry-run
 ~~~
 
+Maintainers should follow [PUBLISHING.md](PUBLISHING.md) for the initial npm
+release and token-free GitHub trusted publishing setup.
+
 ## License
 
 [MIT](LICENSE)
