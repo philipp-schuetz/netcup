@@ -5,8 +5,8 @@
 A small, read-only command-line program for querying available netcup product
 voucher codes.
 
-Prefer a browser? Browse the current [netcup voucher catalog and live code
-finder](https://netcupgutschein.com/).
+Prefer a browser? Browse the current [netcup Gutschein finder and live voucher
+catalog](https://netcupgutschein.com/).
 
 The program sends one HTTPS GET request to the configured voucher API,
 validates the response, and prints product-to-code pairs. The default data
