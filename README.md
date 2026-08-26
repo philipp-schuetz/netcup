@@ -25,12 +25,12 @@ unavailable between refreshes. The timestamp changes only when the code list
 changes, so routine checks do not create no-op commits.
 
 <!-- voucher-codes:start -->
-_Last code update: **2026-08-26 02:03 UTC**_
+_Last code update: **2026-08-26 20:15 UTC**_
 
 | Product | Available voucher codes |
 | :-- | :-- |
-| [**RS 1000 G12**](https://www.netcup.com/en/server/root-server/rs-1000-g12-ip-iv-12m)<br><sub>root-1000-g12</sub> | <code>5997nc17874186690</code><br><code>5997nc17875024440</code><br><code>5997nc17875350340</code><br><code>5997nc17876488030</code><br><code>5997nc17876524600</code><br><code>5997nc17876689320</code> |
-| [**RS 2000 G12**](https://www.netcup.com/en/server/root-server/rs-2000-g12-ip-iv-12m)<br><sub>root-2000-g12</sub> | <code>5998nc17867212600</code><br><code>5998nc17867222310</code><br><code>5998nc17867616780</code><br><code>5998nc17868709620</code><br><code>5998nc17872171470</code><br><code>5998nc17872174560</code> |
+| [**RS 1000 G12**](https://www.netcup.com/en/server/root-server/rs-1000-g12-ip-iv-12m)<br><sub>root-1000-g12</sub> | <code>5997nc17875024440</code><br><code>5997nc17875350340</code><br><code>5997nc17876488030</code><br><code>5997nc17876524600</code><br><code>5997nc17876689320</code><br><code>5997nc17877656270</code> |
+| [**RS 2000 G12**](https://www.netcup.com/en/server/root-server/rs-2000-g12-ip-iv-12m)<br><sub>root-2000-g12</sub> | <code>5998nc17867222310</code><br><code>5998nc17867616780</code><br><code>5998nc17868709620</code><br><code>5998nc17872171470</code><br><code>5998nc17872174560</code><br><code>5998nc17877656270</code> |
 | [**RS 4000 G12**](https://www.netcup.com/en/server/root-server/rs-4000-g12-ip-iv-12m)<br><sub>root-4000-g12</sub> | <code>5999nc17868636240</code><br><code>5999nc17869120150</code><br><code>5999nc17869612810</code><br><code>5999nc17873059050</code><br><code>5999nc17873059051</code><br><code>5999nc17877022110</code> |
 | [**RS 8000 G12**](https://www.netcup.com/en/server/root-server/rs-8000-g12-ip-iv-12m)<br><sub>root-8000-g12</sub> | <code>6000nc17850803380</code><br><code>6000nc17860573670</code><br><code>6000nc17872034050</code><br><code>6000nc17872282770</code><br><code>6000nc17873031300</code><br><code>6000nc17876695390</code> |
 | [**VPS 1000 G12**](https://www.netcup.com/en/server/vps/vps-1000-g12-iv-12m)<br><sub>vps-1000-g12</sub> | <code>5799nc17872021630</code><br><code>5799nc17872721320</code><br><code>5799nc17874517340</code><br><code>5799nc17875350340</code><br><code>5799nc17876132950</code><br><code>5799nc17876136060</code> |
