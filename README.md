@@ -25,12 +25,12 @@ unavailable between refreshes. The timestamp changes only when the code list
 changes, so routine checks do not create no-op commits.
 
 <!-- voucher-codes:start -->
-_Last code update: **2026-09-14 13:03 UTC**_
+_Last code update: **2026-09-14 21:55 UTC**_
 
 | Product | Available voucher codes |
 | :-- | :-- |
 | [**RS 1000 G12**](https://www.netcup.com/en/server/root-server/rs-1000-g12-ip-iv-12m)<br><sub>root-1000-g12</sub> | <code>5997nc17887119171</code><br><code>5997nc17887229280</code><br><code>5997nc17889552730</code><br><code>5997nc17891099000</code><br><code>5997nc17893746480</code><br><code>5997nc17893746481</code> |
-| [**RS 2000 G12**](https://www.netcup.com/en/server/root-server/rs-2000-g12-ip-iv-12m)<br><sub>root-2000-g12</sub> | <code>5998nc17884573770</code><br><code>5998nc17885462080</code><br><code>5998nc17885465020</code><br><code>5998nc17892514240</code><br><code>5998nc17892517410</code><br><code>5998nc17893003310</code> |
+| [**RS 2000 G12**](https://www.netcup.com/en/server/root-server/rs-2000-g12-ip-iv-12m)<br><sub>root-2000-g12</sub> | <code>5998nc17885462080</code><br><code>5998nc17885465020</code><br><code>5998nc17892514240</code><br><code>5998nc17892517410</code><br><code>5998nc17893003310</code><br><code>5998nc17894083160</code> |
 | [**RS 4000 G12**](https://www.netcup.com/en/server/root-server/rs-4000-g12-ip-iv-12m)<br><sub>root-4000-g12</sub> | <code>5999nc17879238480</code><br><code>5999nc17882965470</code><br><code>5999nc17885300190</code><br><code>5999nc17889217540</code><br><code>5999nc17889678580</code><br><code>5999nc17893801280</code> |
 | [**RS 8000 G12**](https://www.netcup.com/en/server/root-server/rs-8000-g12-ip-iv-12m)<br><sub>root-8000-g12</sub> | <code>6000nc17886156580</code><br><code>6000nc17887732230</code><br><code>6000nc17887735450</code><br><code>6000nc17887738360</code><br><code>6000nc17890415570</code><br><code>6000nc17891959010</code> |
 | [**VPS 1000 G12**](https://www.netcup.com/en/server/vps/vps-1000-g12-iv-12m)<br><sub>vps-1000-g12</sub> | <code>5799nc17890271420</code><br><code>5799nc17890277450</code><br><code>5799nc17891206750</code><br><code>5799nc17891418730</code><br><code>5799nc17892535970</code><br><code>5799nc17893860060</code> |
