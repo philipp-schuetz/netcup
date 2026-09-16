@@ -25,11 +25,11 @@ unavailable between refreshes. The timestamp changes only when the code list
 changes, so routine checks do not create no-op commits.
 
 <!-- voucher-codes:start -->
-_Last code update: **2026-09-16 17:08 UTC**_
+_Last code update: **2026-09-16 21:27 UTC**_
 
 | Product | Available voucher codes |
 | :-- | :-- |
-| [**RS 1000 G12**](https://www.netcup.com/en/server/root-server/rs-1000-g12-ip-iv-12m)<br><sub>root-1000-g12</sub> | <code>5997nc17894572940</code><br><code>5997nc17894718780</code><br><code>5997nc17894786410</code><br><code>5997nc17894884520</code><br><code>5997nc17895097780</code><br><code>5997nc17895508720</code> |
+| [**RS 1000 G12**](https://www.netcup.com/en/server/root-server/rs-1000-g12-ip-iv-12m)<br><sub>root-1000-g12</sub> | <code>5997nc17894572940</code><br><code>5997nc17894718780</code><br><code>5997nc17894786410</code><br><code>5997nc17894884520</code><br><code>5997nc17895097780</code><br><code>5997nc17895915860</code> |
 | [**RS 2000 G12**](https://www.netcup.com/en/server/root-server/rs-2000-g12-ip-iv-12m)<br><sub>root-2000-g12</sub> | <code>5998nc17893003310</code><br><code>5998nc17894083160</code><br><code>5998nc17894290610</code><br><code>5998nc17894721770</code><br><code>5998nc17894752140</code><br><code>5998nc17895706320</code> |
 | [**RS 4000 G12**](https://www.netcup.com/en/server/root-server/rs-4000-g12-ip-iv-12m)<br><sub>root-4000-g12</sub> | <code>5999nc17879238480</code><br><code>5999nc17882965470</code><br><code>5999nc17885300190</code><br><code>5999nc17889217540</code><br><code>5999nc17889678580</code><br><code>5999nc17893801280</code> |
 | [**RS 8000 G12**](https://www.netcup.com/en/server/root-server/rs-8000-g12-ip-iv-12m)<br><sub>root-8000-g12</sub> | <code>6000nc17886156580</code><br><code>6000nc17887732230</code><br><code>6000nc17887735450</code><br><code>6000nc17887738360</code><br><code>6000nc17890415570</code><br><code>6000nc17891959010</code> |
