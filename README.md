@@ -25,7 +25,7 @@ unavailable between refreshes. The timestamp changes only when the code list
 changes, so routine checks do not create no-op commits.
 
 <!-- voucher-codes:start -->
-_Last code update: **2026-09-22 21:29 UTC**_
+_Last code update: **2026-10-02 22:22 UTC**_
 
 | Product | Available voucher codes |
 | :-- | :-- |
@@ -37,7 +37,7 @@ _Last code update: **2026-09-22 21:29 UTC**_
 | [**VPS 2000 G12**](https://www.netcup.com/en/server/vps/vps-2000-g12-iv-12m)<br><sub>vps-2000-g12</sub> | <code>5800nc17890649670</code><br><code>5800nc17895652050</code><br><code>5800nc17896082500</code><br><code>5800nc17897462980</code><br><code>5800nc17899762420</code><br><code>5800nc17899987100</code> |
 | [**VPS 4000 G12**](https://www.netcup.com/en/server/vps/vps-4000-g12-iv-12m)<br><sub>vps-4000-g12</sub> | <code>5801nc17882546050</code><br><code>5801nc17885296910</code><br><code>5801nc17886168840</code><br><code>5801nc17897236160</code><br><code>5801nc17899949890</code><br><code>5801nc17900138790</code> |
 | [**VPS 8000 G12**](https://www.netcup.com/en/server/vps/vps-8000-g12-iv-12m)<br><sub>vps-8000-g12</sub> | <code>5802nc17887180110</code><br><code>5802nc17891959010</code><br><code>5802nc17895170480</code><br><code>5802nc17897373180</code><br><code>5802nc17898284470</code><br><code>5802nc17899949890</code> |
-| [**Webhosting 2000**](https://www.netcup.com/en/hosting/web-hosting/webhosting-2000-vie-iv)<br><sub>webhosting-2000</sub> | <code>1927nc17309775710</code><br><code>1927nc17309775711</code><br><code>1927nc17309775712</code><br><code>1927nc17309775714</code><br><code>4602nc17855643400</code><br><code>4602nc17880593540</code> |
+| [**Webhosting 2000**](https://www.netcup.com/en/hosting/web-hosting/webhosting-2000-vie-iv)<br><sub>webhosting-2000</sub> | <code>1927nc17309775710</code><br><code>1927nc17309775711</code><br><code>1927nc17309775712</code><br><code>1927nc17309775714</code><br><code>4602nc17855643400</code> |
 | [**Webhosting 4000**](https://www.netcup.com/en/hosting/web-hosting/webhosting-4000-vie-iv)<br><sub>webhosting-4000</sub> | <code>1928nc17309776320</code><br><code>1928nc17309776321</code><br><code>1928nc17309776325</code><br><code>1928nc17309776326</code><br><code>4603nc17823164450</code><br><code>4603nc17823164451</code> |
 | [**Webhosting 8000**](https://www.netcup.com/en/hosting/web-hosting/webhosting-8000-vie-iv)<br><sub>webhosting-8000</sub> | <code>1929nc17309777820</code><br><code>1929nc17309777821</code><br><code>1929nc17309777822</code><br><code>4604nc17823164460</code><br><code>4604nc17823167320</code><br><code>4604nc17823167321</code> |
 <!-- voucher-codes:end -->
