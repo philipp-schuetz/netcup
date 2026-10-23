@@ -97,8 +97,8 @@ export function printHelp() {
     "  netcup list",
     "  netcup --all",
     "  netcup root",
-    "  netcup vps-1000-g12",
-    "  netcup \"RS 1000 G12\" --json",
+    "  netcup vps-1000-g12-5",
+    "  netcup \"RS 1000 G12.5\" --json",
   ].join("\n"));
 }
 

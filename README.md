@@ -22,24 +22,26 @@ tooling.
 This table is refreshed automatically every six hours from the same one-hour
 cached data source used by the CLI. Codes are one-time use and may become
 unavailable between refreshes. The timestamp changes only when the code list
-changes, so routine checks do not create no-op commits.
+changes, so routine checks do not create no-op commits. Failed or expired
+API responses fail the action instead of being presented as newly verified data.
+The action only reads the cached feed; it never logs into CCP or generates codes.
+The current catalog keeps G12.5 and NUE identities separate from retired variants.
 
 <!-- voucher-codes:start -->
-_Last code update: **2026-10-13 14:24 UTC**_
+_Last code update: **2026-10-23 17:36 UTC**_
 
 | Product | Available voucher codes |
 | :-- | :-- |
-| [**RS 1000 G12**](https://www.netcup.com/en/server/root-server/rs-1000-g12-ip-iv-12m)<br><sub>root-1000-g12</sub> | <code>5997nc17896690440</code><br><code>5997nc17897737430</code><br><code>5997nc17900011170</code><br><code>5997nc17900145070</code><br><code>5997nc17900178660</code><br><code>5997nc17900643540</code> |
-| [**RS 2000 G12**](https://www.netcup.com/en/server/root-server/rs-2000-g12-ip-iv-12m)<br><sub>root-2000-g12</sub> | <code>5998nc17899276341</code><br><code>5998nc17899737550</code><br><code>5998nc17900008090</code><br><code>5998nc17900008091</code><br><code>5998nc17900966600</code><br><code>5998nc17900975790</code> |
-| [**RS 4000 G12**](https://www.netcup.com/en/server/root-server/rs-4000-g12-ip-iv-12m)<br><sub>root-4000-g12</sub> | <code>5999nc17898918180</code><br><code>5999nc17898918181</code><br><code>5999nc17899024650</code><br><code>5999nc17899940590</code><br><code>5999nc17899949890</code><br><code>5999nc17900138790</code> |
-| [**RS 8000 G12**](https://www.netcup.com/en/server/root-server/rs-8000-g12-ip-iv-12m)<br><sub>root-8000-g12</sub> | <code>6000nc17886156580</code><br><code>6000nc17887732230</code><br><code>6000nc17887735450</code><br><code>6000nc17887738360</code><br><code>6000nc17890415570</code><br><code>6000nc17891959010</code> |
-| [**VPS 1000 G12**](https://www.netcup.com/en/server/vps/vps-1000-g12-iv-12m)<br><sub>vps-1000-g12</sub> | <code>5799nc17898284470</code><br><code>5799nc17899793650</code><br><code>5799nc17899864640</code><br><code>5799nc17899987090</code><br><code>5799nc17900640490</code><br><code>5799nc17900723200</code> |
-| [**VPS 2000 G12**](https://www.netcup.com/en/server/vps/vps-2000-g12-iv-12m)<br><sub>vps-2000-g12</sub> | <code>5800nc17890649670</code><br><code>5800nc17895652050</code><br><code>5800nc17896082500</code><br><code>5800nc17897462980</code><br><code>5800nc17899762420</code><br><code>5800nc17899987100</code> |
-| [**VPS 4000 G12**](https://www.netcup.com/en/server/vps/vps-4000-g12-iv-12m)<br><sub>vps-4000-g12</sub> | <code>5801nc17882546050</code><br><code>5801nc17885296910</code><br><code>5801nc17886168840</code><br><code>5801nc17897236160</code><br><code>5801nc17899949890</code><br><code>5801nc17900138790</code> |
-| [**VPS 8000 G12**](https://www.netcup.com/en/server/vps/vps-8000-g12-iv-12m)<br><sub>vps-8000-g12</sub> | <code>5802nc17887180110</code><br><code>5802nc17891959010</code><br><code>5802nc17895170480</code><br><code>5802nc17897373180</code><br><code>5802nc17898284470</code><br><code>5802nc17899949890</code> |
-| [**Webhosting 2000**](https://www.netcup.com/en/hosting/web-hosting/webhosting-2000-vie-iv)<br><sub>webhosting-2000</sub> | <code>1927nc17309775710</code><br><code>1927nc17309775711</code><br><code>1927nc17309775712</code><br><code>1927nc17309775714</code> |
-| [**Webhosting 4000**](https://www.netcup.com/en/hosting/web-hosting/webhosting-4000-vie-iv)<br><sub>webhosting-4000</sub> | <code>1928nc17309776320</code><br><code>1928nc17309776321</code><br><code>1928nc17309776325</code><br><code>1928nc17309776326</code><br><code>4603nc17823164450</code><br><code>4603nc17823164451</code> |
-| [**Webhosting 8000**](https://www.netcup.com/en/hosting/web-hosting/webhosting-8000-vie-iv)<br><sub>webhosting-8000</sub> | <code>1929nc17309777820</code><br><code>1929nc17309777821</code><br><code>1929nc17309777822</code><br><code>4604nc17823164460</code><br><code>4604nc17823167320</code><br><code>4604nc17823167321</code> |
+| [**RS 1000 G12.5**](https://www.netcup.com/en/server/root-server/rs-1000-g12.5-iv-24m-eu#rs-1000-g12.5-iv-12m-eu)<br><sub>root-1000-g12-5</sub> | <code>6874nc17927668910</code><br><code>6874nc17927668911</code><br><code>6874nc17927668912</code><br><code>6874nc17927668913</code><br><code>6874nc17927668914</code><br><code>6874nc17927668915</code> |
+| [**RS 2000 G12.5**](https://www.netcup.com/en/server/root-server/rs-2000-g12.5-iv-24m-eu#rs-2000-g12.5-iv-12m-eu)<br><sub>root-2000-g12-5</sub> | <code>6875nc17927668910</code><br><code>6875nc17927668911</code><br><code>6875nc17927668912</code><br><code>6875nc17927668913</code><br><code>6875nc17927668914</code><br><code>6875nc17927668915</code> |
+| [**RS 8000 G12.5**](https://www.netcup.com/en/server/root-server/rs-8000-g12.5-iv-24m-eu#rs-8000-g12.5-iv-12m-eu)<br><sub>root-8000-g12-5</sub> | <code>6876nc17927671590</code><br><code>6876nc17927725100</code><br><code>6876nc17927725101</code><br><code>6876nc17927725102</code><br><code>6876nc17927725103</code><br><code>6876nc17927725104</code> |
+| [**VPS 1000 G12.5**](https://www.netcup.com/en/server/vps/vps-1000-g12.5-iv-24m-eu#vps-1000-g12.5-iv-12m-eu)<br><sub>vps-1000-g12-5</sub> | <code>6877nc17927671590</code><br><code>6877nc17927725100</code><br><code>6877nc17927725101</code><br><code>6877nc17927725102</code><br><code>6877nc17927725103</code><br><code>6877nc17927725104</code> |
+| [**VPS 2000 G12.5**](https://www.netcup.com/en/server/vps/vps-2000-g12.5-iv-24m-eu#vps-2000-g12.5-iv-12m-eu)<br><sub>vps-2000-g12-5</sub> | <code>6878nc17927671590</code><br><code>6878nc17927725100</code><br><code>6878nc17927725101</code><br><code>6878nc17927725102</code><br><code>6878nc17927725103</code><br><code>6878nc17927725104</code> |
+| [**VPS 4000 G12.5**](https://www.netcup.com/en/server/vps/vps-4000-g12.5-iv-24m-eu#vps-4000-g12.5-iv-12m-eu)<br><sub>vps-4000-g12-5</sub> | <code>6879nc17927671590</code><br><code>6879nc17927725100</code><br><code>6879nc17927725101</code><br><code>6879nc17927725102</code><br><code>6879nc17927725103</code><br><code>6879nc17927725104</code> |
+| [**VPS 8000 G12.5**](https://www.netcup.com/en/server/vps/vps-8000-g12.5-iv-24m-eu#vps-8000-g12.5-iv-12m-eu)<br><sub>vps-8000-g12-5</sub> | <code>6880nc17927671600</code><br><code>6880nc17927725100</code><br><code>6880nc17927725101</code><br><code>6880nc17927725102</code><br><code>6880nc17927725103</code><br><code>6880nc17927725104</code> |
+| [**Webhosting 2000 NUE**](https://www.netcup.com/en/hosting/web-hosting/webhosting-2000-vie-iv#webhosting-2000-nue-iv)<br><sub>webhosting-2000-nue</sub> | <code>5207nc17927668910</code><br><code>5207nc17927668911</code><br><code>5207nc17927668912</code><br><code>5207nc17927668913</code><br><code>5207nc17927668914</code><br><code>5207nc17927668915</code> |
+| [**Webhosting 4000 NUE**](https://www.netcup.com/en/hosting/web-hosting/webhosting-4000-vie-iv#webhosting-4000-nue-iv)<br><sub>webhosting-4000-nue</sub> | <code>5208nc17927668910</code><br><code>5208nc17927668911</code><br><code>5208nc17927668912</code><br><code>5208nc17927668913</code><br><code>5208nc17927668914</code><br><code>5208nc17927668915</code> |
+| [**Webhosting 8000 NUE**](https://www.netcup.com/en/hosting/web-hosting/webhosting-8000-vie-iv#webhosting-8000-nue-iv)<br><sub>webhosting-8000-nue</sub> | <code>5209nc17927668910</code><br><code>5209nc17927668911</code><br><code>5209nc17927668912</code><br><code>5209nc17927668913</code><br><code>5209nc17927668914</code><br><code>5209nc17927668915</code> |
 <!-- voucher-codes:end -->
 
 ## Requirements
@@ -86,14 +88,14 @@ product, so `root` returns all supported Root Servers:
 
 ~~~bash
 bunx netcup root
-bunx netcup vps-1000-g12
-bunx netcup "RS 1000 G12"
+bunx netcup vps-1000-g12-5
+bunx netcup "RS 1000 G12.5"
 ~~~
 
 Use JSON output:
 
 ~~~bash
-bunx netcup vps-1000-g12 --json
+bunx netcup vps-1000-g12-5 --json
 ~~~
 
 Run `bunx netcup --help` for all options. If installed globally, omit `bunx`.

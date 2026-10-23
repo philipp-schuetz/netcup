@@ -17,3 +17,6 @@ jobs:
           bun-version: 1.4.0
       - run: bun install --frozen-lockfile
       - run: bun run check
+      - name: Validate refresh against the public inventory
+        if: github.event_name == 'push'
+        run: bun scripts/update-readme-vouchers.ts

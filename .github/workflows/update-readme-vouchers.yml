@@ -10,6 +10,9 @@ on:
     paths:
       - ".github/workflows/update-readme-vouchers.yml"
       - "scripts/update-readme-vouchers.ts"
+      - "src/catalog.ts"
+      - "src/inventory.ts"
+      - "tests/**"
 
 permissions:
   contents: write

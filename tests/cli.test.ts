@@ -10,9 +10,9 @@ describe("argument parser", () => {
   });
 
   test("accepts one product query and JSON output", () => {
-    expect(parseArguments(["RS", "1000", "G12", "--json"])).toEqual({
+    expect(parseArguments(["RS", "1000", "G12.5", "--json"])).toEqual({
       command: "query",
-      productQuery: "RS 1000 G12",
+      productQuery: "RS 1000 G12.5",
       flags: { all: false, help: false, json: true, version: false },
     });
   });
@@ -88,8 +88,8 @@ describe("argument parser", () => {
 
     expect(exitCode).toBe(0);
     expect(stdout).toContain("PRODUCT");
-    expect(stdout).toContain("root-1000-g12");
-    expect(stdout).toContain("webhosting-8000");
+    expect(stdout).toContain("root-1000-g12-5");
+    expect(stdout).toContain("webhosting-8000-nue");
     expect(stdout).not.toContain("CODE");
     expect(stderr).toBe("");
   });
@@ -110,10 +110,10 @@ describe("argument parser", () => {
       products: Array<{ name: string; slug: string }>;
     };
     expect(exitCode).toBe(0);
-    expect(output.products).toHaveLength(11);
+    expect(output.products).toHaveLength(10);
     expect(output.products[0]).toEqual({
-      name: "RS 1000 G12",
-      slug: "root-1000-g12",
+      name: "RS 1000 G12.5",
+      slug: "root-1000-g12-5",
     });
     expect(stdout).not.toContain('"codes"');
     expect(stderr).toBe("");

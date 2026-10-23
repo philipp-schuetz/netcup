@@ -14,7 +14,7 @@ const repositoryRoot = new URL("../", import.meta.url);
 describe("README voucher snapshot", () => {
   test("renders a compact product table with stable code ordering", () => {
     const inventory = createEmptyVoucherCodeMap();
-    inventory["root-1000-g12"] = [
+    inventory["root-1000-g12-5"] = [
       "0000nc2222222222",
       "0000nc1111111111",
     ];
@@ -22,7 +22,7 @@ describe("README voucher snapshot", () => {
     const block = renderVoucherBlock(inventory, "2026-08-22 06:30 UTC");
     expect(block).toContain("_Last code update: **2026-08-22 06:30 UTC**_");
     expect(block).toContain(
-      "| [**RS 1000 G12**](https://www.netcup.com/en/server/root-server/rs-1000-g12-ip-iv-12m)<br><sub>root-1000-g12</sub>",
+      "| [**RS 1000 G12.5**](https://www.netcup.com/en/server/root-server/rs-1000-g12.5-iv-24m-eu#rs-1000-g12.5-iv-12m-eu)<br><sub>root-1000-g12-5</sub>",
     );
     expect(block.indexOf("0000nc1111111111")).toBeLessThan(
       block.indexOf("0000nc2222222222"),
@@ -31,7 +31,7 @@ describe("README voucher snapshot", () => {
   });
 
   test("links every product to an official netcup comparison page", () => {
-    expect(Object.keys(productUrls)).toHaveLength(11);
+    expect(Object.keys(productUrls)).toHaveLength(10);
     for (const value of Object.values(productUrls)) {
       const url = new URL(value);
       expect(url.protocol).toBe("https:");
@@ -41,7 +41,7 @@ describe("README voucher snapshot", () => {
 
   test("preserves the timestamp and file when the code set is unchanged", () => {
     const inventory = createEmptyVoucherCodeMap();
-    inventory["vps-1000-g12"] = ["0000nc1111111111"];
+    inventory["vps-1000-g12-5"] = ["0000nc1111111111"];
     const original = readmeWith(renderVoucherBlock(inventory, "2026-08-22 00:00 UTC"));
 
     const result = updateReadmeVoucherBlock(
@@ -54,9 +54,9 @@ describe("README voucher snapshot", () => {
 
   test("removes missing codes and advances the timestamp on a real change", () => {
     const before = createEmptyVoucherCodeMap();
-    before["root-1000-g12"] = ["0000nc1111111111"];
+    before["root-1000-g12-5"] = ["0000nc1111111111"];
     const after = createEmptyVoucherCodeMap();
-    after["root-1000-g12"] = ["0000nc2222222222"];
+    after["root-1000-g12-5"] = ["0000nc2222222222"];
     const original = readmeWith(renderVoucherBlock(before, "2026-08-22 00:00 UTC"));
 
     const result = updateReadmeVoucherBlock(

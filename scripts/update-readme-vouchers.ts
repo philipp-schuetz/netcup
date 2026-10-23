@@ -9,17 +9,16 @@ export const voucherBlockStart = "<!-- voucher-codes:start -->";
 export const voucherBlockEnd = "<!-- voucher-codes:end -->";
 
 export const productUrls = {
-  "root-1000-g12": "https://www.netcup.com/en/server/root-server/rs-1000-g12-ip-iv-12m",
-  "root-2000-g12": "https://www.netcup.com/en/server/root-server/rs-2000-g12-ip-iv-12m",
-  "root-4000-g12": "https://www.netcup.com/en/server/root-server/rs-4000-g12-ip-iv-12m",
-  "root-8000-g12": "https://www.netcup.com/en/server/root-server/rs-8000-g12-ip-iv-12m",
-  "vps-1000-g12": "https://www.netcup.com/en/server/vps/vps-1000-g12-iv-12m",
-  "vps-2000-g12": "https://www.netcup.com/en/server/vps/vps-2000-g12-iv-12m",
-  "vps-4000-g12": "https://www.netcup.com/en/server/vps/vps-4000-g12-iv-12m",
-  "vps-8000-g12": "https://www.netcup.com/en/server/vps/vps-8000-g12-iv-12m",
-  "webhosting-2000": "https://www.netcup.com/en/hosting/web-hosting/webhosting-2000-vie-iv",
-  "webhosting-4000": "https://www.netcup.com/en/hosting/web-hosting/webhosting-4000-vie-iv",
-  "webhosting-8000": "https://www.netcup.com/en/hosting/web-hosting/webhosting-8000-vie-iv",
+  "root-1000-g12-5": "https://www.netcup.com/en/server/root-server/rs-1000-g12.5-iv-24m-eu#rs-1000-g12.5-iv-12m-eu",
+  "root-2000-g12-5": "https://www.netcup.com/en/server/root-server/rs-2000-g12.5-iv-24m-eu#rs-2000-g12.5-iv-12m-eu",
+  "root-8000-g12-5": "https://www.netcup.com/en/server/root-server/rs-8000-g12.5-iv-24m-eu#rs-8000-g12.5-iv-12m-eu",
+  "vps-1000-g12-5": "https://www.netcup.com/en/server/vps/vps-1000-g12.5-iv-24m-eu#vps-1000-g12.5-iv-12m-eu",
+  "vps-2000-g12-5": "https://www.netcup.com/en/server/vps/vps-2000-g12.5-iv-24m-eu#vps-2000-g12.5-iv-12m-eu",
+  "vps-4000-g12-5": "https://www.netcup.com/en/server/vps/vps-4000-g12.5-iv-24m-eu#vps-4000-g12.5-iv-12m-eu",
+  "vps-8000-g12-5": "https://www.netcup.com/en/server/vps/vps-8000-g12.5-iv-24m-eu#vps-8000-g12.5-iv-12m-eu",
+  "webhosting-2000-nue": "https://www.netcup.com/en/hosting/web-hosting/webhosting-2000-vie-iv#webhosting-2000-nue-iv",
+  "webhosting-4000-nue": "https://www.netcup.com/en/hosting/web-hosting/webhosting-4000-vie-iv#webhosting-4000-nue-iv",
+  "webhosting-8000-nue": "https://www.netcup.com/en/hosting/web-hosting/webhosting-8000-vie-iv#webhosting-8000-nue-iv"
 } as const satisfies Record<ProductSlug, string>;
 
 function formatTimestamp(value: Date) {
