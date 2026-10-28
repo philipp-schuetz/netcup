@@ -25,3 +25,9 @@ describe("product lookup", () => {
     expect(findProducts("dedicated-arm")).toEqual([]);
   });
 });
+
+test('monthly hosting resolves independently from the twelve-month product', () => {
+  expect(resolveProduct('webhosting-2000-nue-1m')?.slug).toBe('webhosting-2000-nue-1m');
+  expect(resolveProduct('webhosting-2000-nue')?.slug).toBe('webhosting-2000-nue');
+  expect(resolveProduct('Webhosting 2000')).toBeNull();
+});

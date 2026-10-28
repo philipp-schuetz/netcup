@@ -9,6 +9,7 @@ export const voucherBlockStart = "<!-- voucher-codes:start -->";
 export const voucherBlockEnd = "<!-- voucher-codes:end -->";
 
 export const productUrls = {
+  "webhosting-2000-nue-1m": "https://www.netcup.com/de/hosting/webhosting/webhosting-2000-30prozent-rabatt-nue-1m",
   "root-1000-g12-5": "https://www.netcup.com/en/server/root-server/rs-1000-g12.5-iv-24m-eu#rs-1000-g12.5-iv-12m-eu",
   "root-2000-g12-5": "https://www.netcup.com/en/server/root-server/rs-2000-g12.5-iv-24m-eu#rs-2000-g12.5-iv-12m-eu",
   "root-8000-g12-5": "https://www.netcup.com/en/server/root-server/rs-8000-g12.5-iv-24m-eu#rs-8000-g12.5-iv-12m-eu",

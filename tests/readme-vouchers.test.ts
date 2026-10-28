@@ -31,7 +31,7 @@ describe("README voucher snapshot", () => {
   });
 
   test("links every product to an official netcup comparison page", () => {
-    expect(Object.keys(productUrls)).toHaveLength(10);
+    expect(Object.keys(productUrls)).toHaveLength(11);
     for (const value of Object.values(productUrls)) {
       const url = new URL(value);
       expect(url.protocol).toBe("https:");

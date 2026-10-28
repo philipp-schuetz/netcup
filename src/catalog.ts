@@ -44,10 +44,12 @@ export const products = [
     "slug": "webhosting-8000-nue",
     "name": "Webhosting 8000 NUE"
   }
+,
+  { slug: "webhosting-2000-nue-1m", name: "Webhosting 2000 NUE 1M" }
 ] as const satisfies readonly ProductShape[];
 
 // IDs prevent a code for a retired generation or another location being relabeled.
-export const voucherTypeIds: Record<string, number> = {"root-1000-g12-5": 6874, "root-2000-g12-5": 6875, "root-8000-g12-5": 6876, "vps-1000-g12-5": 6877, "vps-2000-g12-5": 6878, "vps-4000-g12-5": 6879, "vps-8000-g12-5": 6880, "webhosting-2000-nue": 5207, "webhosting-4000-nue": 5208, "webhosting-8000-nue": 5209};
+export const voucherTypeIds: Record<string, number> = {"root-1000-g12-5": 6874, "root-2000-g12-5": 6875, "root-8000-g12-5": 6876, "vps-1000-g12-5": 6877, "vps-2000-g12-5": 6878, "vps-4000-g12-5": 6879, "vps-8000-g12-5": 6880, "webhosting-2000-nue": 5207, "webhosting-2000-nue-1m": 6920, "webhosting-4000-nue": 5208, "webhosting-8000-nue": 5209};
 
 export type Product = (typeof products)[number];
 export type ProductSlug = Product["slug"];

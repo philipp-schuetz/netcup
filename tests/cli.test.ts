@@ -110,7 +110,7 @@ describe("argument parser", () => {
       products: Array<{ name: string; slug: string }>;
     };
     expect(exitCode).toBe(0);
-    expect(output.products).toHaveLength(10);
+    expect(output.products).toHaveLength(11);
     expect(output.products[0]).toEqual({
       name: "RS 1000 G12.5",
       slug: "root-1000-g12-5",

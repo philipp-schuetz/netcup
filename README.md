@@ -28,7 +28,7 @@ The action only reads the cached feed; it never logs into CCP or generates codes
 The current catalog keeps G12.5 and NUE identities separate from retired variants.
 
 <!-- voucher-codes:start -->
-_Last code update: **2026-10-27 22:25 UTC**_
+_Last code update: **2026-10-28 07:37 UTC**_
 
 | Product | Available voucher codes |
 | :-- | :-- |
@@ -42,6 +42,7 @@ _Last code update: **2026-10-27 22:25 UTC**_
 | [**Webhosting 2000 NUE**](https://www.netcup.com/en/hosting/web-hosting/webhosting-2000-vie-iv#webhosting-2000-nue-iv)<br><sub>webhosting-2000-nue</sub> | <code>5207nc17927668910</code><br><code>5207nc17927668911</code><br><code>5207nc17927668912</code><br><code>5207nc17927668913</code><br><code>5207nc17927668914</code><br><code>5207nc17927668915</code> |
 | [**Webhosting 4000 NUE**](https://www.netcup.com/en/hosting/web-hosting/webhosting-4000-vie-iv#webhosting-4000-nue-iv)<br><sub>webhosting-4000-nue</sub> | <code>5208nc17927668910</code><br><code>5208nc17927668911</code><br><code>5208nc17927668912</code><br><code>5208nc17927668913</code><br><code>5208nc17927668914</code><br><code>5208nc17927668915</code> |
 | [**Webhosting 8000 NUE**](https://www.netcup.com/en/hosting/web-hosting/webhosting-8000-vie-iv#webhosting-8000-nue-iv)<br><sub>webhosting-8000-nue</sub> | <code>5209nc17927668910</code><br><code>5209nc17927668911</code><br><code>5209nc17927668912</code><br><code>5209nc17927668913</code><br><code>5209nc17927668914</code><br><code>5209nc17927668915</code> |
+| [**Webhosting 2000 NUE 1M**](https://www.netcup.com/de/hosting/webhosting/webhosting-2000-30prozent-rabatt-nue-1m)<br><sub>webhosting-2000-nue-1m</sub> | <code>6920nc17931725440</code><br><code>6920nc17931725441</code><br><code>6920nc17931725442</code> |
 <!-- voucher-codes:end -->
 
 ## Requirements
@@ -121,3 +122,10 @@ release and token-free GitHub trusted publishing setup.
 ## License
 
 [MIT](LICENSE)
+
+The `webhosting-2000-nue-1m` product is the one-month minimum-term,
+monthly-billed NUE offer (CCP type 6920), separate from the existing
+`webhosting-2000-nue` twelve-month offer (5207). Its official €2.82/month
+German VAT-inclusive price already includes the ongoing 30% discount.
+The shared inventory keeps three monthly codes and six per existing product;
+README refreshes still run every six hours without contacting CCP.
