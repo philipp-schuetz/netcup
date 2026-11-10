@@ -28,11 +28,11 @@ The action only reads the cached feed; it never logs into CCP or generates codes
 The current catalog keeps G12.5 and NUE identities separate from retired variants.
 
 <!-- voucher-codes:start -->
-_Last code update: **2026-11-09 22:31 UTC**_
+_Last code update: **2026-11-10 07:30 UTC**_
 
 | Product | Available voucher codes |
 | :-- | :-- |
-| [**RS 1000 G12.5**](https://www.netcup.com/en/server/root-server/rs-1000-g12.5-iv-24m-eu#rs-1000-g12.5-iv-12m-eu)<br><sub>root-1000-g12-5</sub> | <code>6874nc17937538200</code><br><code>6874nc17937882710</code><br><code>6874nc17938286770</code><br><code>6874nc17938389600</code><br><code>6874nc17939860110</code><br><code>6874nc17940448290</code> |
+| [**RS 1000 G12.5**](https://www.netcup.com/en/server/root-server/rs-1000-g12.5-iv-24m-eu#rs-1000-g12.5-iv-12m-eu)<br><sub>root-1000-g12-5</sub> | <code>6874nc17937882710</code><br><code>6874nc17938286770</code><br><code>6874nc17938389600</code><br><code>6874nc17939860110</code><br><code>6874nc17940448290</code><br><code>6874nc17942882910</code> |
 | [**RS 2000 G12.5**](https://www.netcup.com/en/server/root-server/rs-2000-g12.5-iv-24m-eu#rs-2000-g12.5-iv-12m-eu)<br><sub>root-2000-g12-5</sub> | <code>6875nc17937508090</code><br><code>6875nc17940172270</code><br><code>6875nc17940172272</code><br><code>6875nc17940754310</code><br><code>6875nc17940754311</code><br><code>6875nc17942202080</code> |
 | [**RS 8000 G12.5**](https://www.netcup.com/en/server/root-server/rs-8000-g12.5-iv-24m-eu#rs-8000-g12.5-iv-12m-eu)<br><sub>root-8000-g12-5</sub> | <code>6876nc17927671590</code><br><code>6876nc17927725100</code><br><code>6876nc17927725101</code><br><code>6876nc17927725102</code><br><code>6876nc17927725103</code><br><code>6876nc17934577610</code> |
 | [**VPS 1000 G12.5**](https://www.netcup.com/en/server/vps/vps-1000-g12.5-iv-24m-eu#vps-1000-g12.5-iv-12m-eu)<br><sub>vps-1000-g12-5</sub> | <code>6877nc17936354310</code><br><code>6877nc17939169090</code><br><code>6877nc17939292400</code><br><code>6877nc17939601810</code><br><code>6877nc17940856320</code><br><code>6877nc17941360340</code> |
