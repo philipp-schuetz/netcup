@@ -28,14 +28,14 @@ The action only reads the cached feed; it never logs into CCP or generates codes
 The current catalog keeps G12.5 and NUE identities separate from retired variants.
 
 <!-- voucher-codes:start -->
-_Last code update: **2026-11-18 07:43 UTC**_
+_Last code update: **2026-11-20 07:30 UTC**_
 
 | Product | Available voucher codes |
 | :-- | :-- |
 | [**RS 1000 G12.5**](https://www.netcup.com/en/server/root-server/rs-1000-g12.5-iv-24m-eu#rs-1000-g12.5-iv-12m-eu)<br><sub>root-1000-g12-5</sub> | <code>6874nc17938286770</code><br><code>6874nc17938389600</code><br><code>6874nc17940448290</code><br><code>6874nc17942882910</code><br><code>6874nc17945968700</code><br><code>6874nc17946594170</code> |
 | [**RS 2000 G12.5**](https://www.netcup.com/en/server/root-server/rs-2000-g12.5-iv-24m-eu#rs-2000-g12.5-iv-12m-eu)<br><sub>root-2000-g12-5</sub> | <code>6875nc17937508090</code><br><code>6875nc17940172270</code><br><code>6875nc17940754310</code><br><code>6875nc17940754311</code><br><code>6875nc17942202080</code><br><code>6875nc17949042940</code> |
 | [**RS 8000 G12.5**](https://www.netcup.com/en/server/root-server/rs-8000-g12.5-iv-24m-eu#rs-8000-g12.5-iv-12m-eu)<br><sub>root-8000-g12-5</sub> | <code>6876nc17927671590</code><br><code>6876nc17927725100</code><br><code>6876nc17927725101</code><br><code>6876nc17927725102</code><br><code>6876nc17927725103</code><br><code>6876nc17944078950</code> |
-| [**VPS 1000 G12.5**](https://www.netcup.com/en/server/vps/vps-1000-g12.5-iv-24m-eu#vps-1000-g12.5-iv-12m-eu)<br><sub>vps-1000-g12-5</sub> | <code>6877nc17939601810</code><br><code>6877nc17944078950</code><br><code>6877nc17944078951</code><br><code>6877nc17944179930</code><br><code>6877nc17946938110</code><br><code>6877nc17948952600</code> |
+| [**VPS 1000 G12.5**](https://www.netcup.com/en/server/vps/vps-1000-g12.5-iv-24m-eu#vps-1000-g12.5-iv-12m-eu)<br><sub>vps-1000-g12-5</sub> | <code>6877nc17944078950</code><br><code>6877nc17944078951</code><br><code>6877nc17944179930</code><br><code>6877nc17946938110</code><br><code>6877nc17948952600</code><br><code>6877nc17951440130</code> |
 | [**VPS 2000 G12.5**](https://www.netcup.com/en/server/vps/vps-2000-g12.5-iv-24m-eu#vps-2000-g12.5-iv-12m-eu)<br><sub>vps-2000-g12-5</sub> | <code>6878nc17930623190</code><br><code>6878nc17933498680</code><br><code>6878nc17944078950</code><br><code>6878nc17944078951</code><br><code>6878nc17945950520</code><br><code>6878nc17947574300</code> |
 | [**VPS 4000 G12.5**](https://www.netcup.com/en/server/vps/vps-4000-g12.5-iv-24m-eu#vps-4000-g12.5-iv-12m-eu)<br><sub>vps-4000-g12-5</sub> | <code>6879nc17927725101</code><br><code>6879nc17927725102</code><br><code>6879nc17927725103</code><br><code>6879nc17930202810</code><br><code>6879nc17945197910</code><br><code>6879nc17946938120</code> |
 | [**VPS 8000 G12.5**](https://www.netcup.com/en/server/vps/vps-8000-g12.5-iv-24m-eu#vps-8000-g12.5-iv-12m-eu)<br><sub>vps-8000-g12-5</sub> | <code>6880nc17927671600</code><br><code>6880nc17927725101</code><br><code>6880nc17927725102</code><br><code>6880nc17927725103</code><br><code>6880nc17927725104</code><br><code>6880nc17930214850</code> |
