@@ -28,7 +28,7 @@ The action only reads the cached feed; it never logs into CCP or generates codes
 The current catalog keeps G12.5 and NUE identities separate from retired variants.
 
 <!-- voucher-codes:start -->
-_Last code update: **2026-11-26 08:38 UTC**_
+_Last code update: **2026-11-26 21:44 UTC**_
 
 | Product | Available voucher codes |
 | :-- | :-- |
@@ -38,11 +38,11 @@ _Last code update: **2026-11-26 08:38 UTC**_
 | [**VPS 1000 G12.5**](https://www.netcup.com/en/server/vps/vps-1000-g12.5-iv-24m-eu#vps-1000-g12.5-iv-12m-eu)<br><sub>vps-1000-g12-5</sub> | <code>6877nc17944078950</code><br><code>6877nc17944078951</code><br><code>6877nc17944179930</code><br><code>6877nc17946938110</code><br><code>6877nc17948952600</code><br><code>6877nc17954904830</code> |
 | [**VPS 2000 G12.5**](https://www.netcup.com/en/server/vps/vps-2000-g12.5-iv-24m-eu#vps-2000-g12.5-iv-12m-eu)<br><sub>vps-2000-g12-5</sub> | <code>6878nc17930623190</code><br><code>6878nc17933498680</code><br><code>6878nc17944078950</code><br><code>6878nc17944078951</code><br><code>6878nc17945950520</code><br><code>6878nc17954571760</code> |
 | [**VPS 4000 G12.5**](https://www.netcup.com/en/server/vps/vps-4000-g12.5-iv-24m-eu#vps-4000-g12.5-iv-12m-eu)<br><sub>vps-4000-g12-5</sub> | <code>6879nc17927725101</code><br><code>6879nc17927725102</code><br><code>6879nc17927725103</code><br><code>6879nc17945197910</code><br><code>6879nc17946938120</code><br><code>6879nc17954571760</code> |
-| [**VPS 8000 G12.5**](https://www.netcup.com/en/server/vps/vps-8000-g12.5-iv-24m-eu#vps-8000-g12.5-iv-12m-eu)<br><sub>vps-8000-g12-5</sub> | <code>6880nc17927671600</code><br><code>6880nc17927725101</code><br><code>6880nc17927725102</code><br><code>6880nc17927725103</code><br><code>6880nc17927725104</code><br><code>6880nc17930214850</code> |
+| [**VPS 8000 G12.5**](https://www.netcup.com/en/server/vps/vps-8000-g12.5-iv-24m-eu#vps-8000-g12.5-iv-12m-eu)<br><sub>vps-8000-g12-5</sub> | <code>6880nc17927725101</code><br><code>6880nc17927725102</code><br><code>6880nc17927725103</code><br><code>6880nc17927725104</code><br><code>6880nc17930214850</code><br><code>6880nc17956970050</code> |
 | [**Webhosting 2000 NUE**](https://www.netcup.com/en/hosting/web-hosting/webhosting-2000-vie-iv#webhosting-2000-nue-iv)<br><sub>webhosting-2000-nue</sub> | <code>5207nc17927668910</code><br><code>5207nc17927668911</code><br><code>5207nc17927668912</code><br><code>5207nc17927668913</code><br><code>5207nc17927668914</code><br><code>5207nc17927668915</code> |
 | [**Webhosting 4000 NUE**](https://www.netcup.com/en/hosting/web-hosting/webhosting-4000-vie-iv#webhosting-4000-nue-iv)<br><sub>webhosting-4000-nue</sub> | <code>5208nc17938259080</code><br><code>5208nc17938969880</code><br><code>5208nc17947483090</code><br><code>5208nc17949856900</code><br><code>5208nc17954245950</code><br><code>5208nc17954245951</code> |
 | [**Webhosting 8000 NUE**](https://www.netcup.com/en/hosting/web-hosting/webhosting-8000-vie-iv#webhosting-8000-nue-iv)<br><sub>webhosting-8000-nue</sub> | <code>5209nc17927668911</code><br><code>5209nc17927668912</code><br><code>5209nc17927668913</code><br><code>5209nc17927668914</code><br><code>5209nc17927668915</code><br><code>5209nc17954245950</code> |
-| [**Webhosting 2000 NUE 1M**](https://www.netcup.com/de/hosting/webhosting/webhosting-2000-30prozent-rabatt-nue-1m)<br><sub>webhosting-2000-nue-1m</sub> | <code>6920nc17931725441</code><br><code>6920nc17945207050</code><br><code>6920nc17945941410</code> |
+| [**Webhosting 2000 NUE 1M**](https://www.netcup.com/de/hosting/webhosting/webhosting-2000-30prozent-rabatt-nue-1m)<br><sub>webhosting-2000-nue-1m</sub> | <code>6920nc17945207050</code><br><code>6920nc17945941410</code><br><code>6920nc17957078150</code> |
 <!-- voucher-codes:end -->
 
 ## Requirements
